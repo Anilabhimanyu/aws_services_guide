@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS VPC - Virtual Private Cloud | Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🌍 AWS VPC - Virtual Private Cloud</h1>
+            <p>Isolated cloud networks for your AWS resources</p>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+
+        <div class="service-header">
+            <h2>What is Amazon VPC?</h2>
+            <p>Amazon Virtual Private Cloud (VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="content-card">
+                <h3>🎯 Key Features</h3>
+                <ul>
+                    <li><strong>Network Isolation:</strong> Secure, private cloud environment</li>
+                    <li><strong>Subnets:</strong> Divide VPC into public and private sections</li>
+                    <li><strong>Route Tables:</strong> Control traffic flow between subnets</li>
+                    <li><strong>Internet Gateway:</strong> Connect to the internet</li>
+                    <li><strong>NAT Gateway:</strong> Private subnet internet access</li>
+                    <li><strong>Security Groups:</strong> Instance-level firewalls</li>
+                    <li><strong>Network ACLs:</strong> Subnet-level firewalls</li>
+                    <li><strong>VPC Peering:</strong> Connect multiple VPCs</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🔧 Common Use Cases</h3>
+                <ul>
+                    <li><strong>Multi-tier Applications:</strong> Web, app, and database tiers</li>
+                    <li><strong>Hybrid Cloud:</strong> Connect on-premises to AWS</li>
+                    <li><strong>Disaster Recovery:</strong> Isolated backup environments</li>
+                    <li><strong>Development Environments:</strong> Separate dev/test/prod networks</li>
+                    <li><strong>Compliance:</strong> Meet regulatory requirements</li>
+                    <li><strong>Microservices:</strong> Network segmentation for services</li>
+                    <li><strong>Database Security:</strong> Private database access</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>💰 Pricing Components</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Cost</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>VPC</strong></td>
+                        <td>Free</td>
+                        <td>No charge for VPCs themselves</td>
+                    </tr>
+                    <tr>
+                        <td><strong>NAT Gateway</strong></td>
+                        <td>$0.045/hour + data processing</td>
+                        <td>Managed NAT service</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VPN Connection</strong></td>
+                        <td>$0.05/hour</td>
+                        <td>Site-to-site VPN</td>
+                    </tr>
+                    <tr>
+                        <td><strong>VPC Peering</strong></td>
+                        <td>Data transfer charges only</td>
+                        <td>Connect VPCs together</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Transit Gateway</strong></td>
+                        <td>$0.05/hour per attachment</td>
+                        <td>Connect multiple VPCs and on-premises</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conversation">
+            <h3>💬 Developer & Non-Tech Conversation</h3>
+            
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What exactly is a VPC? Why can't we just put our servers directly on the internet?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Think of a VPC like having your own private office building in a business complex. Instead of having your desk on the sidewalk where anyone can access your files, you have a secure building with controlled entry, private rooms, and security guards. VPC gives you a private section of AWS where your servers can communicate securely, hidden from the public internet, with controlled access points."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "This sounds complicated. Do we really need all this networking stuff for a simple website?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "For a simple static website, you might not need VPC complexity. But once you have databases, user accounts, payment processing, or sensitive data, VPC becomes essential. It's like the difference between a lemonade stand (simple) and a bank (needs security). AWS creates a default VPC for you, so you get the benefits without complexity. As you grow, you can customize it for better security and performance."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the difference between public and private subnets? When should I use each?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Subnet design patterns:
+                <br>• <strong>Public subnets:</strong> Direct internet access via Internet Gateway
+                <br>&nbsp;&nbsp;- Web servers, load balancers, bastion hosts
+                <br>&nbsp;&nbsp;- Resources that need to serve internet traffic
+                <br>• <strong>Private subnets:</strong> No direct internet access
+                <br>&nbsp;&nbsp;- Databases, application servers, internal services
+                <br>&nbsp;&nbsp;- Access internet via NAT Gateway for updates
+                <br>Best practice: Multi-tier architecture with public ALB → private app servers → private databases"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What happens if someone tries to hack into our VPC? How secure is it really?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "VPC provides multiple security layers - like a castle with walls, moats, and guards:
+                <br>• <strong>Network isolation:</strong> Your VPC is completely separate from others
+                <br>• <strong>Security Groups:</strong> Firewall rules for each server
+                <br>• <strong>Network ACLs:</strong> Additional firewall at subnet level
+                <br>• <strong>Private subnets:</strong> Servers hidden from internet
+                <br>• <strong>VPN/Direct Connect:</strong> Encrypted connections to your office
+                <br>Even if someone breaches one layer, they face multiple additional barriers."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How should I design VPC architecture for high availability?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "High availability VPC design:
+                <br>• <strong>Multi-AZ deployment:</strong> Spread subnets across availability zones
+                <br>• <strong>Public subnets in each AZ:</strong> For load balancers and NAT Gateways
+                <br>• <strong>Private subnets in each AZ:</strong> For application and database tiers
+                <br>• <strong>Multiple NAT Gateways:</strong> One per AZ to avoid single point of failure
+                <br>• <strong>Auto Scaling Groups:</strong> Span multiple AZs
+                <br>• <strong>Application Load Balancer:</strong> Distribute traffic across AZs"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Can we connect our office network to AWS? How does that work?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Yes! AWS offers several connection options:
+                <br>• <strong>Site-to-Site VPN:</strong> Encrypted tunnel over internet (quick setup, lower cost)
+                <br>• <strong>AWS Direct Connect:</strong> Dedicated network connection (faster, more reliable, higher cost)
+                <br>• <strong>Client VPN:</strong> Individual employee access from anywhere
+                <br>This creates a 'hybrid cloud' where your office and AWS act like one big network. Employees can access AWS resources as if they were in the office."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the difference between Security Groups and Network ACLs? Do I need both?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "They work at different levels - defense in depth:
+                <br>• <strong>Security Groups (Stateful):</strong>
+                <br>&nbsp;&nbsp;- Instance-level firewall
+                <br>&nbsp;&nbsp;- Allow rules only (default deny)
+                <br>&nbsp;&nbsp;- Stateful (return traffic automatically allowed)
+                <br>• <strong>Network ACLs (Stateless):</strong>
+                <br>&nbsp;&nbsp;- Subnet-level firewall
+                <br>&nbsp;&nbsp;- Allow and deny rules
+                <br>&nbsp;&nbsp;- Stateless (must allow both inbound and outbound)
+                <br>Most use cases only need Security Groups. Use NACLs for additional security or compliance requirements."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "How do we manage costs with VPC? I heard NAT Gateways can be expensive."
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "VPC cost optimization strategies:
+                <br>• <strong>NAT Instances vs Gateways:</strong> NAT instances cheaper but require management
+                <br>• <strong>VPC Endpoints:</strong> Connect to AWS services without internet charges
+                <br>• <strong>Data transfer optimization:</strong> Keep traffic within same AZ when possible
+                <br>• <strong>Right-size NAT Gateways:</strong> Start small, scale as needed
+                <br>• <strong>Review data transfer:</strong> Monitor cross-AZ and internet traffic
+                <br>Most startups spend $20-100/month on VPC components."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How do I troubleshoot VPC connectivity issues?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "VPC troubleshooting checklist:
+                <br>• <strong>Route tables:</strong> Verify correct routes to targets
+                <br>• <strong>Security groups:</strong> Check inbound/outbound rules
+                <br>• <strong>Network ACLs:</strong> Verify allow rules for both directions
+                <br>• <strong>Internet Gateway:</strong> Attached to VPC and in route table
+                <br>• <strong>NAT Gateway:</strong> Healthy and in correct subnet
+                <br>• <strong>VPC Flow Logs:</strong> See what traffic is allowed/denied
+                <br>• <strong>Reachability Analyzer:</strong> Test connectivity between resources"
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AWS Services Guide. Educational purposes only.</p>
+    </footer>
+</body>
+</html>

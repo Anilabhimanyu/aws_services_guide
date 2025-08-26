@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS RDS - Relational Database Service | Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🗃️ AWS RDS - Relational Database Service</h1>
+            <p>Managed relational databases in the cloud</p>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+
+        <div class="service-header">
+            <h2>What is Amazon RDS?</h2>
+            <p>Amazon RDS makes it easy to set up, operate, and scale a relational database in the cloud. It provides cost-efficient and resizable capacity while automating time-consuming administration tasks.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="content-card">
+                <h3>🎯 Key Features</h3>
+                <ul>
+                    <li><strong>Managed Service:</strong> AWS handles maintenance, backups, updates</li>
+                    <li><strong>Multiple Engines:</strong> MySQL, PostgreSQL, MariaDB, Oracle, SQL Server, Aurora</li>
+                    <li><strong>Automatic Backups:</strong> Point-in-time recovery up to 35 days</li>
+                    <li><strong>Multi-AZ Deployment:</strong> High availability and failover</li>
+                    <li><strong>Read Replicas:</strong> Scale read operations</li>
+                    <li><strong>Security:</strong> Encryption at rest and in transit</li>
+                    <li><strong>Monitoring:</strong> Built-in CloudWatch metrics</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🔧 Common Use Cases</h3>
+                <ul>
+                    <li><strong>Web Applications:</strong> Backend databases for websites</li>
+                    <li><strong>E-commerce:</strong> Product catalogs, order management</li>
+                    <li><strong>CRM Systems:</strong> Customer relationship management</li>
+                    <li><strong>ERP Applications:</strong> Enterprise resource planning</li>
+                    <li><strong>Analytics:</strong> Data warehousing and reporting</li>
+                    <li><strong>Gaming:</strong> Player data and leaderboards</li>
+                    <li><strong>SaaS Applications:</strong> Multi-tenant databases</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>💰 Database Engines & Pricing</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Engine</th>
+                        <th>Best For</th>
+                        <th>Starting Price</th>
+                        <th>Key Benefits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Amazon Aurora</strong></td>
+                        <td>High-performance applications</td>
+                        <td>~$0.10/hour</td>
+                        <td>5x faster than MySQL, auto-scaling</td>
+                    </tr>
+                    <tr>
+                        <td><strong>MySQL</strong></td>
+                        <td>Web applications, general purpose</td>
+                        <td>~$0.017/hour</td>
+                        <td>Popular, well-supported, open source</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PostgreSQL</strong></td>
+                        <td>Complex queries, analytics</td>
+                        <td>~$0.017/hour</td>
+                        <td>Advanced features, JSON support</td>
+                    </tr>
+                    <tr>
+                        <td><strong>MariaDB</strong></td>
+                        <td>MySQL alternative</td>
+                        <td>~$0.017/hour</td>
+                        <td>Enhanced MySQL with more features</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Oracle</strong></td>
+                        <td>Enterprise applications</td>
+                        <td>~$0.35/hour</td>
+                        <td>Enterprise features, bring own license</td>
+                    </tr>
+                    <tr>
+                        <td><strong>SQL Server</strong></td>
+                        <td>Microsoft ecosystem</td>
+                        <td>~$0.20/hour</td>
+                        <td>Windows integration, .NET apps</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-card">
+            <h3>🏆 Alternatives Comparison</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Provider</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google Cloud SQL</strong></td>
+                        <td>Google Cloud</td>
+                        <td>Good BigQuery integration, competitive pricing</td>
+                        <td>Fewer engine options</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Azure Database</strong></td>
+                        <td>Microsoft</td>
+                        <td>Excellent SQL Server support, hybrid options</td>
+                        <td>Complex pricing structure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PlanetScale</strong></td>
+                        <td>PlanetScale</td>
+                        <td>Serverless MySQL, branching like Git</td>
+                        <td>MySQL only, newer service</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Supabase</strong></td>
+                        <td>Supabase</td>
+                        <td>PostgreSQL with real-time features</td>
+                        <td>PostgreSQL only, less enterprise features</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conversation">
+            <h3>💬 Developer & Non-Tech Conversation</h3>
+            
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "I understand we need a database, but what's RDS? Why not just install MySQL on a regular server?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Think of RDS like having a professional database administrator working 24/7, but without paying a salary! If you install MySQL yourself, you need to handle backups, security updates, monitoring, scaling, and fixing issues when they break. RDS does all of this automatically. It's like comparing maintaining your own car vs leasing one with full maintenance included."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What happens if the database crashes? Do we lose all our customer data?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "That's the beauty of RDS! With Multi-AZ deployment, AWS automatically creates a copy of your database in a different data center. If the main one fails, it switches to the backup in about 1-2 minutes. Plus, RDS automatically backs up your data every day and keeps transaction logs, so you can restore to any point in time within the last 35 days. It's like having multiple safety nets."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "Should I choose Aurora or regular MySQL for my new application?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Consider Aurora if you need:
+                <br>• High performance (5x faster than standard MySQL)
+                <br>• Auto-scaling storage (up to 128TB)
+                <br>• Better availability (6 copies across 3 AZs)
+                <br>• Serverless option for variable workloads
+                <br>Choose standard MySQL if:
+                <br>• Budget is tight (Aurora costs ~3x more)
+                <br>• Simple applications with predictable load
+                <br>• You need specific MySQL versions or extensions"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "How much is this going to cost us? I'm worried about database bills getting out of control."
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "RDS pricing is predictable! You pay for three main things: the database instance (like renting a computer), storage space, and backup storage. A small database for a startup might cost $15-30/month. The key is right-sizing - you can start small and upgrade as you grow. AWS also offers Reserved Instances that can save 40-60% if you commit to 1-3 years."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the best practice for handling database connections from Lambda functions?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Lambda + RDS connection management is crucial:
+                <br>• Use RDS Proxy to handle connection pooling
+                <br>• Implement connection reuse in your Lambda code
+                <br>• Set appropriate timeout values
+                <br>• Use IAM database authentication when possible
+                <br>• Consider Aurora Serverless for truly serverless databases
+                <br>• Monitor connection count to avoid hitting limits"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What's a read replica? Do I need one?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "A read replica is like having a copy of your database that's constantly updated but only used for reading data, not writing. Imagine a library with one main desk where you check out books (write operations) and multiple reading rooms (read replicas). You need read replicas if:
+                <br>• Your app reads data much more than it writes
+                <br>• You want to reduce load on your main database
+                <br>• You need better performance for users in different regions"
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How do I handle database migrations and schema changes with RDS?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Best practices for database migrations:
+                <br>• Use database migration tools (Flyway, Liquibase, or built-in tools)
+                <br>• Test migrations on a copy first
+                <br>• Use Blue-Green deployments for major changes
+                <br>• Consider Aurora's fast cloning for testing
+                <br>• Schedule maintenance windows for major updates
+                <br>• Use Database Migration Service (DMS) for large migrations
+                <br>• Always backup before major changes"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Is our data secure in RDS? What about compliance requirements?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "RDS is very secure and compliance-ready:
+                <br>• Data is encrypted at rest and in transit
+                <br>• Network isolation with VPC
+                <br>• IAM integration for access control
+                <br>• Automatic security updates
+                <br>• Compliance certifications (SOC, PCI DSS, HIPAA, etc.)
+                <br>• Database activity monitoring available
+                <br>• Regular security patches applied automatically"
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What monitoring should I set up for my RDS instance?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Essential RDS monitoring:
+                <br>• <strong>CPU Utilization:</strong> Alert at 80%+
+                <br>• <strong>Database Connections:</strong> Monitor against connection limit
+                <br>• <strong>Free Storage Space:</strong> Alert when running low
+                <br>• <strong>Read/Write Latency:</strong> Performance indicators
+                <br>• <strong>IOPS:</strong> I/O performance monitoring
+                <br>• <strong>Failed Connection Count:</strong> Security indicator
+                <br>• Use Performance Insights for query-level analysis
+                <br>• Set up CloudWatch alarms for all critical metrics"
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AWS Services Guide. Educational purposes only.</p>
+    </footer>
+</body>
+</html>

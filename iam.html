@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS IAM - Identity and Access Management | Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🔐 AWS IAM - Identity & Access Management</h1>
+            <p>Securely manage access to AWS services and resources</p>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+
+        <div class="service-header">
+            <h2>What is AWS IAM?</h2>
+            <p>AWS Identity and Access Management (IAM) enables you to manage access to AWS services and resources securely. You can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="content-card">
+                <h3>🎯 Key Features</h3>
+                <ul>
+                    <li><strong>Fine-grained Permissions:</strong> Precise control over resource access</li>
+                    <li><strong>Multi-factor Authentication:</strong> Additional security layer</li>
+                    <li><strong>Identity Federation:</strong> Use existing corporate identities</li>
+                    <li><strong>Role-based Access:</strong> Temporary credentials for applications</li>
+                    <li><strong>Policy Management:</strong> JSON-based permission policies</li>
+                    <li><strong>Access Analysis:</strong> Review and analyze permissions</li>
+                    <li><strong>AWS Organizations Integration:</strong> Central management across accounts</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🔧 Core Components</h3>
+                <ul>
+                    <li><strong>Users:</strong> Individual people or applications</li>
+                    <li><strong>Groups:</strong> Collections of users with similar needs</li>
+                    <li><strong>Roles:</strong> Temporary credentials for services/applications</li>
+                    <li><strong>Policies:</strong> Documents defining permissions</li>
+                    <li><strong>Identity Providers:</strong> External authentication systems</li>
+                    <li><strong>Access Keys:</strong> Programmatic access credentials</li>
+                    <li><strong>MFA Devices:</strong> Additional authentication factors</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>💰 Pricing</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Cost</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>IAM Users, Groups, Roles, Policies</strong></td>
+                        <td>Free</td>
+                        <td>Core IAM features at no charge</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AWS Single Sign-On</strong></td>
+                        <td>Free</td>
+                        <td>Up to 5 connected applications</td>
+                    </tr>
+                    <tr>
+                        <td><strong>External Identity Provider</strong></td>
+                        <td>$0.015 per user/month</td>
+                        <td>Beyond 5 connected applications</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Access Analyzer</strong></td>
+                        <td>Free</td>
+                        <td>Policy analysis and validation</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conversation">
+            <h3>💬 Developer & Non-Tech Conversation</h3>
+            
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Why do we need IAM? Can't we just use one admin account for everything?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Using one admin account is like giving everyone in your company the master key to every room, safe, and file cabinet. IAM is like having a sophisticated key management system where each person gets only the keys they need for their job. The marketing person gets access to the website files but not the financial database. If someone leaves or gets compromised, you only need to revoke their specific access, not change everything."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "This sounds complicated. How do we manage all these permissions without making mistakes?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "IAM follows the 'principle of least privilege' - start with no access and only add what's needed. It's like a nightclub with VIP sections - everyone starts at the general admission level, and you only upgrade access as needed. AWS provides templates and best practices. Plus, IAM has tools to analyze permissions and find unused or excessive access, like having a security audit built-in."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "Should I use IAM users or roles for application access?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Always use roles for applications and services:
+                <br>• <strong>Roles:</strong> Temporary credentials that rotate automatically
+                <br>• <strong>No permanent keys:</strong> Can't be stolen or leaked long-term
+                <br>• <strong>Fine-grained control:</strong> Can be assumed by specific services only
+                <br>• <strong>Auditable:</strong> Clear trail of who assumed what role when
+                <br>Reserve IAM users for human beings who need console access. For EC2, Lambda, etc., always use IAM roles."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What happens if we lock ourselves out? How do we prevent that?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Great question! AWS provides several safety nets:
+                <br>• The root account always retains full access (secure it with MFA!)
+                <br>• Create 'break-glass' emergency access policies
+                <br>• Use AWS CloudTrail to track all changes
+                <br>• Test policy changes in a staging environment first
+                <br>• Use IAM policy simulator to test permissions before applying
+                <br>• Always have at least two administrators with full access"
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the best way to structure IAM policies for a growing team?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Follow these IAM best practices:
+                <br>• <strong>Use groups:</strong> Create job-function groups (developers, testers, admins)
+                <br>• <strong>Managed policies:</strong> Use AWS managed policies when possible
+                <br>• <strong>Custom policies:</strong> Create reusable custom policies for specific needs
+                <br>• <strong>Resource-based policies:</strong> Use S3 bucket policies, Lambda resource policies
+                <br>• <strong>Condition keys:</strong> Add time, IP, and MFA conditions
+                <br>• <strong>Regular audits:</strong> Review and remove unused permissions quarterly"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "How do we handle employees who leave the company or change roles?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "IAM makes this easy and secure:
+                <br>• <strong>Immediate revocation:</strong> Disable user account instantly
+                <br>• <strong>Access keys rotation:</strong> Automatically invalidate their API access
+                <br>• <strong>Group management:</strong> Remove from groups rather than individual permissions
+                <br>• <strong>Role changes:</strong> Move between groups for role changes
+                <br>• <strong>Audit trail:</strong> CloudTrail shows exactly what they accessed
+                <br>• <strong>Automation:</strong> Integrate with HR systems for automatic provisioning/deprovisioning"
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How should I implement MFA across our organization?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "MFA implementation strategy:
+                <br>• <strong>Require MFA for console access:</strong> Especially for admins
+                <br>• <strong>Virtual MFA devices:</strong> Google Authenticator, Authy for most users
+                <br>• <strong>Hardware tokens:</strong> For high-privilege accounts
+                <br>• <strong>Policy enforcement:</strong> Use IAM conditions to require MFA for sensitive actions
+                <br>• <strong>Recovery procedures:</strong> Plan for lost/broken MFA devices
+                <br>• <strong>Regular audits:</strong> Ensure all users have MFA enabled"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Can we use our existing company login system instead of creating new AWS accounts for everyone?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Yes! This is called identity federation, and it's a best practice:
+                <br>• <strong>SAML integration:</strong> Connect with Active Directory, Okta, etc.
+                <br>• <strong>Single Sign-On:</strong> Employees use their normal company login
+                <br>• <strong>Centralized management:</strong> HR manages one system, AWS access follows
+                <br>• <strong>Automatic provisioning:</strong> New employees get appropriate AWS access automatically
+                <br>• <strong>Better security:</strong> No additional passwords to manage or forget"
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What are some common IAM security mistakes I should avoid?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Common IAM pitfalls to avoid:
+                <br>• <strong>Overly broad permissions:</strong> Don't use '*' unless absolutely necessary
+                <br>• <strong>Long-lived access keys:</strong> Rotate keys regularly, use roles instead
+                <br>• <strong>Shared accounts:</strong> Each person should have their own IAM user
+                <br>• <strong>No MFA on root:</strong> Root account must have MFA enabled
+                <br>• <strong>Inline policies:</strong> Use managed policies for easier management
+                <br>• <strong>No monitoring:</strong> Set up CloudTrail and access logging
+                <br>• <strong>Ignoring unused permissions:</strong> Regular audit and cleanup"
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AWS Services Guide. Educational purposes only.</p>
+    </footer>
+</body>
+</html>

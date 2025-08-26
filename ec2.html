@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EC2 - Elastic Compute Cloud | Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>📦 AWS EC2 - Elastic Compute Cloud</h1>
+            <p>Virtual servers in the cloud</p>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+
+        <div class="service-header">
+            <h2>What is Amazon EC2?</h2>
+            <p>Amazon Elastic Compute Cloud (EC2) provides secure, resizable compute capacity in the cloud. It's designed to make web-scale cloud computing easier for developers.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="content-card">
+                <h3>🎯 Key Features</h3>
+                <ul>
+                    <li><strong>Elastic Web-Scale Computing:</strong> Scale up or down within minutes</li>
+                    <li><strong>Complete Control:</strong> Root access to each instance</li>
+                    <li><strong>Flexible Cloud Hosting:</strong> Choice of multiple instance types and operating systems</li>
+                    <li><strong>Integrated:</strong> Works with most AWS services</li>
+                    <li><strong>Reliable:</strong> 99.99% availability SLA</li>
+                    <li><strong>Secure:</strong> Multiple layers of security</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🔧 Common Use Cases</h3>
+                <ul>
+                    <li><strong>Web Applications:</strong> Host websites and web apps</li>
+                    <li><strong>Development & Testing:</strong> Create dev/test environments</li>
+                    <li><strong>Database Hosting:</strong> Run database servers</li>
+                    <li><strong>Backup & Recovery:</strong> Create backup solutions</li>
+                    <li><strong>High Performance Computing:</strong> Scientific computing</li>
+                    <li><strong>Gaming Servers:</strong> Multiplayer game hosting</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>💰 Pricing Models</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Pricing Model</th>
+                        <th>Description</th>
+                        <th>Best For</th>
+                        <th>Savings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>On-Demand</strong></td>
+                        <td>Pay per hour/second with no commitments</td>
+                        <td>Short-term, unpredictable workloads</td>
+                        <td>Base price</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reserved Instances</strong></td>
+                        <td>1 or 3-year commitment</td>
+                        <td>Steady-state applications</td>
+                        <td>Up to 75%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spot Instances</strong></td>
+                        <td>Bid for unused capacity</td>
+                        <td>Fault-tolerant applications</td>
+                        <td>Up to 90%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dedicated Hosts</strong></td>
+                        <td>Physical server dedicated to you</td>
+                        <td>Compliance requirements</td>
+                        <td>Variable</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-card">
+            <h3>🏆 Alternatives Comparison</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Provider</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google Compute Engine</strong></td>
+                        <td>Google Cloud</td>
+                        <td>Sustained use discounts, custom machine types</td>
+                        <td>Smaller ecosystem than AWS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Azure Virtual Machines</strong></td>
+                        <td>Microsoft</td>
+                        <td>Great Windows integration, hybrid cloud</td>
+                        <td>Complex pricing structure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DigitalOcean Droplets</strong></td>
+                        <td>DigitalOcean</td>
+                        <td>Simple pricing, developer-friendly</td>
+                        <td>Limited enterprise features</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Linode</strong></td>
+                        <td>Akamai</td>
+                        <td>Transparent pricing, good performance</td>
+                        <td>Fewer data centers</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conversation">
+            <h3>💬 Developer & Non-Tech Conversation</h3>
+            
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "I keep hearing about EC2, but I don't understand what it actually is. Can you explain it in simple terms?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Think of EC2 like renting a computer in the cloud. Instead of buying a physical server and putting it in your office, you rent virtual computers from Amazon that live in their data centers. You can access these computers from anywhere with an internet connection."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Why would someone want to rent a computer instead of just buying one?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Great question! Several reasons: First, you only pay for what you use - like paying for electricity only when lights are on. Second, if you need more power, you can upgrade instantly without buying new hardware. Third, Amazon handles all the maintenance, security updates, and if something breaks, they fix it. Fourth, you can create copies of your computer instantly for backup or testing."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the difference between instance types? I see t3.micro, m5.large, c5.xlarge..."
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Instance types are like different car models - each optimized for different needs:
+                <br>• <strong>T3 (Burstable):</strong> Like a hybrid car - efficient for normal use, can boost when needed
+                <br>• <strong>M5 (General Purpose):</strong> Like a sedan - balanced CPU, memory, networking
+                <br>• <strong>C5 (Compute Optimized):</strong> Like a sports car - high-performance processors
+                <br>• <strong>R5 (Memory Optimized):</strong> Like a truck - lots of RAM for data processing
+                <br>• <strong>I3 (Storage Optimized):</strong> Like a cargo van - optimized for high storage throughput"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "This sounds expensive. How much does it actually cost?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "It's actually quite affordable! A small server (t3.micro) costs about $8-10 per month. That's less than most people spend on coffee! The beauty is you can start small and only pay more as you grow. Compare that to buying a physical server which costs thousands upfront, plus electricity, maintenance, and replacement costs."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "When should I use Spot instances vs On-Demand?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Use Spot instances for fault-tolerant workloads that can handle interruption - like batch processing, data analysis, or testing environments. They can save you up to 90% but AWS can terminate them with 2 minutes notice when they need the capacity. Use On-Demand for production applications that need guaranteed availability."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What happens if Amazon's computers break down? Do I lose everything?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Amazon has multiple data centers worldwide, so if one fails, your services can automatically switch to another. Plus, you should always backup your important data. It's like having your files stored in multiple bank vaults instead of just one safe at home. AWS actually has better uptime than most companies could achieve on their own."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the best practice for security with EC2?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Key security practices:
+                <br>• Use IAM roles instead of storing credentials on instances
+                <br>• Keep security groups restrictive (principle of least privilege)
+                <br>• Regular OS and software updates
+                <br>• Use VPC for network isolation
+                <br>• Enable CloudTrail for audit logging
+                <br>• Use Systems Manager for secure remote access instead of SSH keys
+                <br>• Encrypt EBS volumes and snapshots"
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AWS Services Guide. Educational purposes only.</p>
+    </footer>
+</body>
+</html>

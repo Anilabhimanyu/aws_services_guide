@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS CloudFront - Content Delivery Network | Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🌐 AWS CloudFront</h1>
+            <p>Fast, secure content delivery network</p>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+
+        <div class="service-header">
+            <h2>What is Amazon CloudFront?</h2>
+            <p>Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency and high transfer speeds.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="content-card">
+                <h3>🎯 Key Features</h3>
+                <ul>
+                    <li><strong>Global Edge Network:</strong> 400+ points of presence worldwide</li>
+                    <li><strong>Low Latency:</strong> Content cached closer to users</li>
+                    <li><strong>DDoS Protection:</strong> Built-in AWS Shield Standard</li>
+                    <li><strong>SSL/TLS:</strong> Free SSL certificates</li>
+                    <li><strong>Real-time Metrics:</strong> Detailed analytics and monitoring</li>
+                    <li><strong>Lambda@Edge:</strong> Run code at edge locations</li>
+                    <li><strong>Origin Shield:</strong> Additional caching layer</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🔧 Common Use Cases</h3>
+                <ul>
+                    <li><strong>Website Acceleration:</strong> Faster loading of static content</li>
+                    <li><strong>Video Streaming:</strong> Live and on-demand video delivery</li>
+                    <li><strong>API Acceleration:</strong> Speed up API responses</li>
+                    <li><strong>Software Distribution:</strong> Fast downloads of software packages</li>
+                    <li><strong>Gaming:</strong> Reduce latency for game assets</li>
+                    <li><strong>E-commerce:</strong> Fast product images and pages</li>
+                    <li><strong>Mobile Apps:</strong> Accelerate mobile app content</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>💰 Pricing Model</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Free Tier</th>
+                        <th>Pricing</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Data Transfer Out</strong></td>
+                        <td>1TB per month</td>
+                        <td>$0.085-0.170 per GB</td>
+                        <td>Varies by region, decreases with volume</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HTTP/HTTPS Requests</strong></td>
+                        <td>10M per month</td>
+                        <td>$0.0075-0.016 per 10,000</td>
+                        <td>Varies by region and request type</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Field Level Encryption</strong></td>
+                        <td>None</td>
+                        <td>$0.02 per 10,000 requests</td>
+                        <td>Additional security for sensitive data</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Real-time Logs</strong></td>
+                        <td>None</td>
+                        <td>$0.01 per 1M log lines</td>
+                        <td>Detailed request logging</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-card">
+            <h3>🏆 Alternatives Comparison</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Provider</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Cloudflare</strong></td>
+                        <td>Cloudflare</td>
+                        <td>Excellent performance, great free tier, security features</td>
+                        <td>Less AWS integration</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fastly</strong></td>
+                        <td>Fastly</td>
+                        <td>Real-time purging, advanced VCL configuration</td>
+                        <td>More expensive, complex setup</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Azure CDN</strong></td>
+                        <td>Microsoft</td>
+                        <td>Good integration with Azure services</td>
+                        <td>Smaller global footprint</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Cloud CDN</strong></td>
+                        <td>Google Cloud</td>
+                        <td>Good performance, integration with Google services</td>
+                        <td>Fewer edge locations</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conversation">
+            <h3>💬 Developer & Non-Tech Conversation</h3>
+            
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What exactly is CloudFront and why do we need it? Our website already works fine."
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Think of CloudFront like having multiple convenience stores instead of one central warehouse. When someone in Tokyo wants to buy your product, instead of shipping from New York (slow and expensive), they can get it from a local store in Tokyo (fast and cheap). CloudFront puts copies of your website content in data centers around the world, so users always get content from the location closest to them."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "How much faster does this actually make our website? Is it worth the cost?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "CloudFront can reduce loading times by 50-90%! If your server is in Virginia and someone visits from Australia, they might wait 3-5 seconds for images to load. With CloudFront, it drops to under 1 second. Studies show that every 100ms delay costs about 1% in sales. The cost is usually very low - maybe $5-20/month for most small businesses, but the performance improvement is huge."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the difference between CloudFront and just using S3 for static content?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "S3 serves content from one region, while CloudFront caches it globally:
+                <br>• <strong>Performance:</strong> CloudFront is much faster for global users
+                <br>• <strong>Cost:</strong> CloudFront can be cheaper for high-traffic sites (data transfer pricing)
+                <br>• <strong>Security:</strong> CloudFront includes DDoS protection and WAF integration
+                <br>• <strong>SSL:</strong> Free SSL certificates with CloudFront
+                <br>• <strong>Caching:</strong> CloudFront can cache dynamic content too
+                <br>For global audiences, always use CloudFront in front of S3."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What happens if we update our website? Do users see old content for a while?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Great question! CloudFront caches content for a certain period (TTL - Time To Live). You can control this - maybe images cache for 24 hours, but HTML caches for only 5 minutes. When you update content, you can 'invalidate' the cache to force CloudFront to get fresh content immediately. It's like telling all the convenience stores to throw out the old products and get new ones from the warehouse."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How should I configure caching headers for different types of content?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Caching strategy by content type:
+                <br>• <strong>Static assets (images, CSS, JS):</strong> Long cache (1 year), use versioned filenames
+                <br>• <strong>HTML pages:</strong> Short cache (5-15 minutes) or no-cache for dynamic content
+                <br>• <strong>API responses:</strong> Very short cache (30 seconds - 5 minutes) or none
+                <br>• <strong>User-specific content:</strong> No cache or use Cache-Control: private
+                <br>• Use CloudFront behaviors to set different caching rules for different URL patterns"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Is CloudFront secure? What if hackers try to attack our website?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "CloudFront actually makes your site more secure! It includes AWS Shield Standard for free, which protects against DDoS attacks (when hackers try to overwhelm your site with traffic). It also hides your origin server - attackers only see CloudFront, not your actual server. You can add AWS WAF (Web Application Firewall) to block malicious requests. It's like having a security team at every convenience store location."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's Lambda@Edge and when should I use it?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Lambda@Edge runs code at CloudFront edge locations. Use cases:
+                <br>• <strong>A/B testing:</strong> Route users to different versions
+                <br>• <strong>Authentication:</strong> Check auth tokens at the edge
+                <br>• <strong>Request/Response manipulation:</strong> Modify headers, URLs
+                <br>• <strong>Bot detection:</strong> Block suspicious traffic
+                <br>• <strong>Personalization:</strong> Serve different content based on user agent
+                <br>• <strong>SEO optimization:</strong> Server-side rendering for crawlers
+                <br>Keep functions lightweight - they run on every request!"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Can CloudFront help with our mobile app performance too?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Absolutely! Mobile apps benefit enormously from CloudFront:
+                <br>• Faster API responses (especially important on mobile networks)
+                <br>• Quicker image and video loading
+                <br>• Reduced battery drain (less time waiting for downloads)
+                <br>• Better experience on slow networks (3G, weak WiFi)
+                <br>• Lower data usage for users (cached content doesn't re-download)
+                <br>Your mobile users will notice the difference immediately."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How do I monitor CloudFront performance and troubleshoot issues?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "CloudFront monitoring tools:
+                <br>• <strong>CloudWatch metrics:</strong> Cache hit ratio, origin latency, error rates
+                <br>• <strong>Real-time logs:</strong> Detailed request information
+                <br>• <strong>Popular objects report:</strong> See what content is requested most
+                <br>• <strong>Cache statistics:</strong> Understand cache effectiveness
+                <br>• <strong>CloudFront console:</strong> Distribution metrics and health
+                <br>Set up alarms for high error rates and low cache hit ratios"
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AWS Services Guide. Educational purposes only.</p>
+    </footer>
+</body>
+</html>

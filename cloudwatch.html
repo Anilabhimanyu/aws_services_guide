@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS CloudWatch - Monitoring and Observability | Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🔍 AWS CloudWatch</h1>
+            <p>Monitoring and observability for your AWS resources</p>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+
+        <div class="service-header">
+            <h2>What is Amazon CloudWatch?</h2>
+            <p>Amazon CloudWatch is a monitoring and observability service built for DevOps engineers, developers, site reliability engineers (SREs), and IT managers to monitor applications, respond to system-wide performance changes, and optimize resource utilization.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="content-card">
+                <h3>🎯 Key Features</h3>
+                <ul>
+                    <li><strong>Metrics Collection:</strong> Monitor AWS resources and applications</li>
+                    <li><strong>Custom Metrics:</strong> Track application-specific data</li>
+                    <li><strong>Alarms:</strong> Automated responses to metric thresholds</li>
+                    <li><strong>Dashboards:</strong> Visual monitoring displays</li>
+                    <li><strong>Logs Management:</strong> Centralized log collection and analysis</li>
+                    <li><strong>Events:</strong> Respond to AWS resource changes</li>
+                    <li><strong>Insights:</strong> Query and analyze log data</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🔧 Common Use Cases</h3>
+                <ul>
+                    <li><strong>Infrastructure Monitoring:</strong> Track EC2, RDS, Lambda performance</li>
+                    <li><strong>Application Performance:</strong> Monitor response times, error rates</li>
+                    <li><strong>Log Analysis:</strong> Troubleshoot issues and analyze patterns</li>
+                    <li><strong>Cost Optimization:</strong> Monitor resource usage and costs</li>
+                    <li><strong>Security Monitoring:</strong> Track unusual access patterns</li>
+                    <li><strong>Auto Scaling:</strong> Trigger scaling based on metrics</li>
+                    <li><strong>Compliance:</strong> Maintain audit trails and reports</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>💰 Pricing Components</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Free Tier</th>
+                        <th>Pricing</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Standard Metrics</strong></td>
+                        <td>10 custom metrics</td>
+                        <td>$0.30 per metric/month</td>
+                        <td>5-minute frequency metrics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>High Resolution Metrics</strong></td>
+                        <td>None</td>
+                        <td>$0.30 per metric/month</td>
+                        <td>1-second frequency metrics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Alarms</strong></td>
+                        <td>10 alarms</td>
+                        <td>$0.10 per alarm/month</td>
+                        <td>Standard metric alarms</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Logs Ingestion</strong></td>
+                        <td>5GB</td>
+                        <td>$0.50 per GB</td>
+                        <td>Log data ingestion</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Logs Storage</strong></td>
+                        <td>5GB</td>
+                        <td>$0.03 per GB/month</td>
+                        <td>Log data storage</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conversation">
+            <h3>💬 Developer & Non-Tech Conversation</h3>
+            
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Why do we need CloudWatch? Can't we just check if our website is working by visiting it?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Imagine trying to monitor the health of a 24/7 business by only checking once when you remember. CloudWatch is like having security cameras, health monitors, and performance trackers running constantly. It watches CPU usage, memory, network traffic, error rates, and thousands of other metrics 24/7. It can alert you to problems before customers notice them, and it tracks patterns that help prevent issues."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What happens when CloudWatch detects a problem? Does it fix it automatically?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "CloudWatch is like a smart smoke detector - it detects problems and can trigger automatic responses. For example, if CPU usage gets too high, it can automatically start more servers. If error rates spike, it can send alerts to the team and even trigger automated fixes. It can scale resources up during busy periods and down during quiet times, potentially saving money while maintaining performance."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the difference between CloudWatch Metrics, Logs, and Events? When should I use each?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Think of them as different types of information:
+                <br>• <strong>Metrics:</strong> Numerical data over time (CPU %, response time, error count)
+                <br>• <strong>Logs:</strong> Text records of what happened (error messages, user actions, debug info)
+                <br>• <strong>Events:</strong> Notifications when things change (instance started, deployment completed)
+                <br>Use metrics for performance monitoring, logs for troubleshooting, and events for automation triggers."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "How much data does CloudWatch collect? Are we going to get hit with huge bills?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "CloudWatch has generous free tiers! You get 10 custom metrics, 10 alarms, and 5GB of logs free every month. Basic AWS service metrics (like EC2 CPU usage) are free. For most small to medium applications, you might pay $10-50/month. The key is being smart about log retention - you don't need to keep debug logs for years. Set retention periods based on your actual needs."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What are the most important alarms to set up for a web application?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Essential alarms for web applications:
+                <br>• <strong>High CPU/Memory:</strong> Resource exhaustion
+                <br>• <strong>Error Rate:</strong> Application failures (>5% error rate)
+                <br>• <strong>Response Time:</strong> Performance degradation (>2s average)
+                <br>• <strong>Database Connections:</strong> Connection pool exhaustion
+                <br>• <strong>Disk Space:</strong> Storage running low
+                <br>• <strong>Network Errors:</strong> Connectivity issues
+                <br>• <strong>Custom Metrics:</strong> Business-specific indicators (user signups, payments)"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Can CloudWatch help us understand our users better? Like what features they use most?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Absolutely! CloudWatch can track custom business metrics:
+                <br>• User login rates and patterns
+                <br>• Feature usage frequency
+                <br>• Transaction volumes and success rates
+                <br>• Geographic usage patterns
+                <br>• Revenue metrics and conversion rates
+                <br>You can create dashboards showing both technical health and business KPIs. It's like having a business intelligence tool built into your monitoring system."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How should I structure my CloudWatch Logs for effective troubleshooting?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Log organization best practices:
+                <br>• <strong>Structured logging:</strong> Use JSON format for easy parsing
+                <br>• <strong>Log groups by service:</strong> Separate groups for each application/service
+                <br>• <strong>Consistent log levels:</strong> ERROR, WARN, INFO, DEBUG
+                <br>• <strong>Correlation IDs:</strong> Track requests across services
+                <br>• <strong>Retention policies:</strong> Different retention for different log types
+                <br>• <strong>Log insights queries:</strong> Pre-written queries for common issues
+                <br>• <strong>Metric filters:</strong> Create metrics from log patterns"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What's the difference between CloudWatch and other monitoring tools like New Relic or Datadog?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "CloudWatch vs. third-party tools:
+                <br><strong>CloudWatch Pros:</strong> Deep AWS integration, cost-effective, no additional agents for AWS services
+                <br><strong>CloudWatch Cons:</strong> Limited application-level insights, basic UI
+                <br><strong>Third-party Pros:</strong> Better application performance monitoring, advanced analytics, nicer dashboards
+                <br><strong>Third-party Cons:</strong> More expensive, additional complexity, data leaves AWS
+                <br>Many companies use CloudWatch for infrastructure and third-party tools for application monitoring."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How can I use CloudWatch for cost optimization?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "CloudWatch cost optimization strategies:
+                <br>• <strong>Right-sizing alerts:</strong> Alert when resources are consistently underutilized
+                <br>• <strong>Billing alarms:</strong> Get notified when costs exceed thresholds
+                <br>• <strong>Resource utilization dashboards:</strong> Identify waste visually
+                <br>• <strong>Automated scaling:</strong> Scale down during off-hours
+                <br>• <strong>Cost anomaly detection:</strong> Identify unusual spending patterns
+                <br>• <strong>Reserved Instance utilization:</strong> Track if you're using what you paid for
+                <br>• <strong>Custom cost metrics:</strong> Track cost per customer, per feature, etc."
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AWS Services Guide. Educational purposes only.</p>
+    </footer>
+</body>
+</html>

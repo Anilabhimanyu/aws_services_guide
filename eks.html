@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS EKS - Elastic Kubernetes Service | Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🚀 AWS EKS - Elastic Kubernetes Service</h1>
+            <p>Managed Kubernetes for container orchestration</p>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+
+        <div class="service-header">
+            <h2>What is Amazon EKS?</h2>
+            <p>Amazon Elastic Kubernetes Service (EKS) is a managed service that makes it easy to run Kubernetes on AWS without needing to install, operate, and maintain your own Kubernetes control plane or nodes.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="content-card">
+                <h3>🎯 Key Features</h3>
+                <ul>
+                    <li><strong>Managed Control Plane:</strong> AWS manages Kubernetes masters</li>
+                    <li><strong>High Availability:</strong> Multi-AZ control plane by default</li>
+                    <li><strong>Security:</strong> IAM integration and VPC network isolation</li>
+                    <li><strong>Scaling:</strong> Automatic scaling of applications and infrastructure</li>
+                    <li><strong>Monitoring:</strong> Built-in CloudWatch and Prometheus integration</li>
+                    <li><strong>Networking:</strong> AWS VPC networking and load balancing</li>
+                    <li><strong>Storage:</strong> EBS, EFS, and FSx integration</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🔧 Common Use Cases</h3>
+                <ul>
+                    <li><strong>Microservices:</strong> Container-based application architecture</li>
+                    <li><strong>Batch Processing:</strong> Large-scale data processing jobs</li>
+                    <li><strong>ML Workloads:</strong> Machine learning training and inference</li>
+                    <li><strong>CI/CD Pipelines:</strong> Automated deployment workflows</li>
+                    <li><strong>Hybrid Applications:</strong> Mix of containerized and traditional services</li>
+                    <li><strong>Multi-cloud:</strong> Portable applications across cloud providers</li>
+                    <li><strong>Modernization:</strong> Containerize legacy applications</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>💰 Pricing Components</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Cost</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>EKS Cluster</strong></td>
+                        <td>$0.10/hour</td>
+                        <td>Managed Kubernetes control plane</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Worker Nodes</strong></td>
+                        <td>EC2 pricing</td>
+                        <td>Standard EC2 instance costs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fargate</strong></td>
+                        <td>Per vCPU/memory</td>
+                        <td>Serverless container compute</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Load Balancer</strong></td>
+                        <td>ALB/NLB pricing</td>
+                        <td>Application/Network Load Balancer costs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Storage</strong></td>
+                        <td>EBS/EFS pricing</td>
+                        <td>Persistent storage costs</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-card">
+            <h3>🏆 Alternatives Comparison</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Provider</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google GKE</strong></td>
+                        <td>Google Cloud</td>
+                        <td>Google created Kubernetes, autopilot mode</td>
+                        <td>Less AWS service integration</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Azure AKS</strong></td>
+                        <td>Microsoft</td>
+                        <td>Good Windows container support</td>
+                        <td>Less mature than EKS</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Self-managed K8s</strong></td>
+                        <td>Any provider</td>
+                        <td>Full control, lower costs</td>
+                        <td>Complex management, security responsibility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Docker Swarm</strong></td>
+                        <td>Any provider</td>
+                        <td>Simpler than Kubernetes</td>
+                        <td>Less features, smaller ecosystem</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conversation">
+            <h3>💬 Developer & Non-Tech Conversation</h3>
+            
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "I keep hearing about Kubernetes and containers, but I don't understand what they are or why we need EKS. Can you explain?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Think of containers like shipping containers for software. Just like how shipping containers standardize how goods are transported, software containers standardize how applications are packaged and run. Kubernetes is like the port management system that decides which containers go where, manages the loading and unloading, and keeps everything running smoothly. EKS is like having Amazon manage the entire port for you."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Why is this better than just running our applications on regular servers?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Containers solve several problems: First, they ensure your app works the same everywhere (no more 'it works on my machine'). Second, you can pack multiple apps on one server efficiently. Third, if one app crashes, it doesn't affect others. Fourth, scaling is automatic - need more capacity? Kubernetes starts more containers. Need less? It shuts them down. It's like having a smart building that automatically adds or removes rooms based on occupancy."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "Should I use EKS on EC2 or EKS on Fargate? What's the difference?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Choose based on your needs:
+                <br>• <strong>EKS on EC2:</strong>
+                <br>&nbsp;&nbsp;- Lower cost for consistent workloads
+                <br>&nbsp;&nbsp;- More control over instance types and configurations
+                <br>&nbsp;&nbsp;- Better for GPU workloads or special requirements
+                <br>&nbsp;&nbsp;- You manage the worker nodes
+                <br>• <strong>EKS on Fargate:</strong>
+                <br>&nbsp;&nbsp;- Serverless - no node management
+                <br>&nbsp;&nbsp;- Pay only for running pods
+                <br>&nbsp;&nbsp;- Better for variable or unpredictable workloads
+                <br>&nbsp;&nbsp;- Slightly higher per-vCPU cost"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "This sounds very complex. Do we really need all this complexity for our application?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Kubernetes has complexity, but it solves bigger problems:
+                <br>• <strong>Start simple:</strong> You can begin with just a few containers
+                <br>• <strong>Growth ready:</strong> Scales from startup to enterprise without redesign
+                <br>• <strong>Cost efficiency:</strong> Better resource utilization saves money
+                <br>• <strong>Reliability:</strong> Automatic recovery from failures
+                <br>• <strong>Team productivity:</strong> Developers can deploy independently
+                <br>If you're just starting, consider simpler options like Lambda or ECS first. EKS shines when you have multiple services and teams."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the learning curve like for Kubernetes? How long until my team is productive?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Kubernetes learning path:
+                <br>• <strong>Basic concepts:</strong> 2-4 weeks (pods, services, deployments)
+                <br>• <strong>Productive development:</strong> 1-2 months with good tooling
+                <br>• <strong>Production operations:</strong> 3-6 months for full proficiency
+                <br>• <strong>Accelerate learning:</strong> Use eksctl, Helm charts, and AWS CDK
+                <br>• <strong>Start managed:</strong> Let AWS handle complexity initially
+                <br>Investment pays off - teams become much more efficient once comfortable"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What happens if EKS goes down? Do all our applications stop working?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "EKS is designed for high availability:
+                <br>• Control plane runs across multiple AWS data centers
+                <br>• If one data center fails, others continue running
+                <br>• Your applications keep running even if control plane has issues
+                <br>• You can deploy across multiple availability zones
+                <br>• AWS has a 99.95% uptime SLA for EKS
+                <br>• Best practice: design applications to handle individual component failures gracefully"
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How do I monitor and troubleshoot applications in EKS?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "EKS monitoring strategy:
+                <br>• <strong>Container Insights:</strong> Built-in CloudWatch monitoring
+                <br>• <strong>Prometheus:</strong> Open-source metrics collection
+                <br>• <strong>Jaeger/X-Ray:</strong> Distributed tracing
+                <br>• <strong>Fluentd/Fluent Bit:</strong> Log aggregation
+                <br>• <strong>Kubernetes Dashboard:</strong> Visual cluster management
+                <br>• <strong>kubectl:</strong> Command-line troubleshooting
+                <br>• <strong>AWS Load Balancer Controller:</strong> Ingress monitoring"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "How much does EKS actually cost compared to other options?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "EKS cost breakdown:
+                <br>• <strong>Control plane:</strong> $72/month per cluster
+                <br>• <strong>Worker nodes:</strong> Standard EC2 pricing
+                <br>• <strong>Example:</strong> Small cluster might cost $200-400/month total
+                <br>• <strong>Savings:</strong> Better resource utilization can reduce overall costs
+                <br>• <strong>vs. Managed solutions:</strong> Often 50-70% cheaper than alternatives
+                <br>• <strong>vs. Self-managed:</strong> Higher cost but much lower operational overhead
+                <br>The real value is in operational efficiency and reliability"
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the best way to get started with EKS without overwhelming my team?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "EKS adoption strategy:
+                <br>• <strong>Start with eksctl:</strong> Simplifies cluster creation
+                <br>• <strong>Use AWS CDK/Terraform:</strong> Infrastructure as code
+                <br>• <strong>Begin with Fargate:</strong> Less operational overhead
+                <br>• <strong>Deploy one simple service first:</strong> Learn iteratively
+                <br>• <strong>Use Helm charts:</strong> Package management for Kubernetes
+                <br>• <strong>Implement CI/CD gradually:</strong> Start with basic deployment pipelines
+                <br>• <strong>Invest in training:</strong> Send key team members to workshops
+                <br>• <strong>Consider consulting:</strong> Get expert help for initial setup"
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AWS Services Guide. Educational purposes only.</p>
+    </footer>
+</body>
+</html>

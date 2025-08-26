@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Lambda - Serverless Computing | Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>☁️ AWS Lambda</h1>
+            <p>Run code without thinking about servers</p>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+
+        <div class="service-header">
+            <h2>What is AWS Lambda?</h2>
+            <p>AWS Lambda is a serverless computing service that runs your code in response to events and automatically manages the underlying compute resources for you.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="content-card">
+                <h3>🎯 Key Features</h3>
+                <ul>
+                    <li><strong>No Server Management:</strong> AWS handles all infrastructure</li>
+                    <li><strong>Event-Driven:</strong> Code runs in response to triggers</li>
+                    <li><strong>Automatic Scaling:</strong> From zero to thousands of concurrent executions</li>
+                    <li><strong>Pay per Request:</strong> Only pay when your code runs</li>
+                    <li><strong>Multiple Languages:</strong> Python, Node.js, Java, C#, Go, Ruby, etc.</li>
+                    <li><strong>Built-in Monitoring:</strong> CloudWatch integration</li>
+                    <li><strong>VPC Integration:</strong> Access private resources</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🔧 Common Use Cases</h3>
+                <ul>
+                    <li><strong>API Backends:</strong> Power REST APIs with API Gateway</li>
+                    <li><strong>File Processing:</strong> Process uploads to S3</li>
+                    <li><strong>Data Transformation:</strong> ETL operations</li>
+                    <li><strong>Scheduled Tasks:</strong> Cron jobs in the cloud</li>
+                    <li><strong>Real-time Analytics:</strong> Process streaming data</li>
+                    <li><strong>IoT Backends:</strong> Handle device data</li>
+                    <li><strong>Chatbots:</strong> Process messages and responses</li>
+                    <li><strong>Image Processing:</strong> Resize, convert, analyze images</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>💰 Pricing Model</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Free Tier</th>
+                        <th>Paid Rate</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Requests</strong></td>
+                        <td>1M per month</td>
+                        <td>$0.20 per 1M requests</td>
+                        <td>Each function invocation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Duration (GB-seconds)</strong></td>
+                        <td>400,000 GB-seconds</td>
+                        <td>$0.0000166667 per GB-second</td>
+                        <td>Memory allocation × execution time</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Provisioned Concurrency</strong></td>
+                        <td>None</td>
+                        <td>$0.0000097222 per GB-second</td>
+                        <td>Keep functions warm for low latency</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-card">
+            <h3>🏆 Alternatives Comparison</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Provider</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google Cloud Functions</strong></td>
+                        <td>Google Cloud</td>
+                        <td>Good integration with Google services, competitive pricing</td>
+                        <td>Fewer triggers and language options</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Azure Functions</strong></td>
+                        <td>Microsoft</td>
+                        <td>Great .NET support, flexible pricing plans</td>
+                        <td>Less mature ecosystem</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vercel Functions</strong></td>
+                        <td>Vercel</td>
+                        <td>Excellent developer experience, easy deployment</td>
+                        <td>Limited to web use cases</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cloudflare Workers</strong></td>
+                        <td>Cloudflare</td>
+                        <td>Edge computing, very fast cold starts</td>
+                        <td>JavaScript/WebAssembly only</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conversation">
+            <h3>💬 Developer & Non-Tech Conversation</h3>
+            
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "I keep hearing about 'serverless' and Lambda. What does it mean? Are there really no servers?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Great question! There are still servers, but you don't see or manage them. Think of it like ordering food from a restaurant - you don't worry about the kitchen, the chef, or the equipment. You just order food and get it delivered. With Lambda, you write code and AWS runs it on their servers whenever needed. You don't deal with server maintenance, updates, or scaling."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "How is this different from having our own servers or using EC2?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "It's like the difference between owning a car vs using Uber. With your own servers (or EC2), you 'own the car' - you're responsible for maintenance, insurance, parking, and you pay for it even when you're not using it. With Lambda, you 'call an Uber' - you only pay when you actually need to go somewhere (when your code runs), and someone else handles all the maintenance."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What are the main limitations I should be aware of with Lambda?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Key limitations to consider:
+                <br>• <strong>Execution time:</strong> 15 minutes maximum per invocation
+                <br>• <strong>Memory:</strong> 128MB to 10,008MB (affects CPU allocation)
+                <br>• <strong>Package size:</strong> 50MB zipped, 250MB unzipped
+                <br>• <strong>Temporary storage:</strong> 512MB to 10,240MB in /tmp
+                <br>• <strong>Cold starts:</strong> Initial latency when scaling from zero
+                <br>• <strong>Concurrent executions:</strong> 1,000 by default (can be increased)"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "This sounds too good to be true. What's the catch? When shouldn't I use Lambda?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Lambda isn't always the right choice. Avoid it for:
+                <br>• Long-running applications (like web servers that run 24/7)
+                <br>• Applications requiring persistent connections
+                <br>• Very high-performance computing that needs dedicated resources
+                <br>• Applications that need consistent sub-second response times
+                <br>• Complex applications that are better suited for containers
+                <br>It's perfect for short, event-driven tasks, but not for everything."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How do I handle database connections in Lambda? I've heard about connection pooling issues."
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Database connections are tricky with Lambda because of the stateless nature:
+                <br>• Use connection pooling libraries that work with serverless
+                <br>• Consider AWS RDS Proxy for automatic connection pooling
+                <br>• Use DynamoDB for truly serverless database experience
+                <br>• Implement connection reuse in your function (outside handler)
+                <br>• Consider using services like Aurora Serverless for auto-scaling databases"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "How much does Lambda actually cost? Can it get expensive?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Lambda can be incredibly cheap for many use cases. Example: A function that runs 1 million times per month for 200ms each with 512MB memory costs about $8.35/month. The beauty is you only pay for actual usage. However, costs can add up for high-frequency or long-running functions. Always monitor your usage and consider alternatives like EC2 for consistently high-volume workloads."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the best way to handle environment-specific configurations and secrets?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Best practices for configuration:
+                <br>• Use environment variables for non-sensitive config
+                <br>• Use AWS Systems Manager Parameter Store or AWS Secrets Manager for sensitive data
+                <br>• Use AWS Lambda Powertools for structured logging and configuration
+                <br>• Implement configuration caching to reduce API calls
+                <br>• Use Lambda Layers for shared configuration code
+                <br>• Never hardcode secrets in your function code"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What happens if my Lambda function breaks? How do I debug it?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "AWS provides excellent debugging tools:
+                <br>• CloudWatch Logs automatically capture all console output
+                <br>• X-Ray for distributed tracing and performance analysis
+                <br>• CloudWatch Metrics for monitoring invocations, errors, and duration
+                <br>• Dead Letter Queues to capture failed events
+                <br>• You can test functions directly in the AWS console
+                <br>• Local testing with tools like SAM CLI or Serverless Framework"
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How do I implement proper error handling and retries?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Comprehensive error handling strategy:
+                <br>• Implement proper exception handling in your code
+                <br>• Configure retry policies based on trigger type
+                <br>• Use Dead Letter Queues for failed events
+                <br>• Implement exponential backoff for external API calls
+                <br>• Use CloudWatch Alarms for error monitoring
+                <br>• Consider circuit breaker patterns for external dependencies
+                <br>• Log structured error information for debugging"
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AWS Services Guide. Educational purposes only.</p>
+    </footer>
+</body>
+</html>

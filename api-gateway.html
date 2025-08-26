@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS API Gateway - Manage APIs | Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🚪 AWS API Gateway</h1>
+            <p>Create, publish, maintain, monitor, and secure APIs</p>
+        </nav>
+    </header>
+
+    <main>
+        <a href="index.html" class="back-btn">← Back to Services</a>
+
+        <div class="service-header">
+            <h2>What is Amazon API Gateway?</h2>
+            <p>Amazon API Gateway is a fully managed service that makes it easy for developers to create, publish, maintain, monitor, and secure APIs at any scale.</p>
+        </div>
+
+        <div class="service-content">
+            <div class="content-card">
+                <h3>🎯 Key Features</h3>
+                <ul>
+                    <li><strong>RESTful & WebSocket APIs:</strong> Support for multiple API types</li>
+                    <li><strong>Traffic Management:</strong> Throttling, quotas, and API keys</li>
+                    <li><strong>Authorization & Security:</strong> IAM, Cognito, Lambda authorizers</li>
+                    <li><strong>Monitoring & Analytics:</strong> CloudWatch integration</li>
+                    <li><strong>Request/Response Transformation:</strong> Modify data on the fly</li>
+                    <li><strong>Caching:</strong> Improve performance with response caching</li>
+                    <li><strong>SDK Generation:</strong> Auto-generate client SDKs</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3>🔧 Common Use Cases</h3>
+                <ul>
+                    <li><strong>Microservices:</strong> Create APIs for microservice architectures</li>
+                    <li><strong>Mobile Backends:</strong> APIs for mobile applications</li>
+                    <li><strong>Serverless APIs:</strong> Frontend for Lambda functions</li>
+                    <li><strong>Legacy Modernization:</strong> Expose legacy systems as APIs</li>
+                    <li><strong>Third-party Integration:</strong> Secure access to internal services</li>
+                    <li><strong>IoT Applications:</strong> Device communication APIs</li>
+                    <li><strong>Partner APIs:</strong> External developer access</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h3>💰 Pricing Models</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>API Type</th>
+                        <th>Use Case</th>
+                        <th>Pricing</th>
+                        <th>Free Tier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>REST API</strong></td>
+                        <td>Full-featured REST APIs</td>
+                        <td>$3.50 per million calls</td>
+                        <td>1M calls/month</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HTTP API</strong></td>
+                        <td>High-performance, cost-effective</td>
+                        <td>$1.00 per million calls</td>
+                        <td>1M calls/month</td>
+                    </tr>
+                    <tr>
+                        <td><strong>WebSocket API</strong></td>
+                        <td>Real-time communication</td>
+                        <td>$1.00 per million messages</td>
+                        <td>1M messages/month</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-card">
+            <h3>🏆 Alternatives Comparison</h3>
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Provider</th>
+                        <th>Pros</th>
+                        <th>Cons</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Apigee</strong></td>
+                        <td>Google Cloud</td>
+                        <td>Advanced analytics, enterprise features</td>
+                        <td>Expensive, complex setup</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Azure API Management</strong></td>
+                        <td>Microsoft</td>
+                        <td>Good developer portal, hybrid deployment</td>
+                        <td>Microsoft ecosystem focused</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kong</strong></td>
+                        <td>Kong Inc.</td>
+                        <td>Open source, highly customizable</td>
+                        <td>Requires more management</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Postman</strong></td>
+                        <td>Postman</td>
+                        <td>Great for API development and testing</td>
+                        <td>Limited production features</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="conversation">
+            <h3>💬 Developer & Non-Tech Conversation</h3>
+            
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What exactly is an API, and why do we need API Gateway? Can't our apps just talk directly to each other?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Think of an API like a restaurant menu and waiter system. The menu (API) tells you what you can order (available functions), and the waiter (API Gateway) takes your order, brings it to the kitchen (backend), and returns your food (response). Without this system, customers would have to go into the kitchen and make their own food - chaos! API Gateway manages all the ordering, ensures only authorized people can order, tracks what's popular, and handles busy periods."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "This sounds like another thing to manage and pay for. Why not just let our apps connect directly?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Direct connections create major problems: no security control (anyone could access anything), no monitoring (you don't know who's using what), no rate limiting (one user could overwhelm your system), and changes break everything. API Gateway is like having a professional receptionist who checks IDs, logs visitors, prevents overcrowding, and can redirect people when you're renovating. The small cost saves huge headaches."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "Should I use REST API or HTTP API for my new project?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Choose HTTP API if you want:
+                <br>• Lower cost (71% cheaper)
+                <br>• Better performance (up to 60% faster)
+                <br>• OIDC and OAuth 2.0 authorization
+                <br>• CORS support
+                <br>Choose REST API if you need:
+                <br>• API keys for client identification
+                <br>• Request/response transformations
+                <br>• SDK generation
+                <br>• Advanced throttling and caching
+                <br>• WAF integration
+                <br>For most new projects, start with HTTP API unless you specifically need REST features."
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "What happens if API Gateway goes down? Do all our services stop working?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "API Gateway has a 99.95% uptime SLA and is designed to be highly available across multiple data centers. If it did go down, yes, services depending on it would be affected. However, this is extremely rare. For critical applications, you can implement fallback mechanisms or use multiple regions. The reliability and security benefits usually far outweigh the dependency risk."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "How should I handle API versioning with API Gateway?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Best practices for API versioning:
+                <br>• Use stage-based versioning (/v1, /v2) for major versions
+                <br>• Use canary deployments for gradual rollouts
+                <br>• Maintain backward compatibility when possible
+                <br>• Use request/response transformations for minor changes
+                <br>• Version your Lambda functions alongside API versions
+                <br>• Document deprecation timelines clearly
+                <br>• Use API Gateway's stage variables for environment-specific configs"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "How do we control who can use our APIs? We want to offer different access levels to different customers."
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "API Gateway offers several authorization methods:
+                <br>• <strong>API Keys:</strong> Simple client identification with usage tracking
+                <br>• <strong>IAM:</strong> For AWS services and internal applications
+                <br>• <strong>Cognito:</strong> User authentication with JWT tokens
+                <br>• <strong>Lambda Authorizers:</strong> Custom authorization logic
+                <br>You can create usage plans with different rate limits and quotas for different customer tiers - like bronze, silver, gold plans with increasing API call limits."
+            </div>
+
+            <div class="conversation-turn dev-question">
+                <strong>Developer:</strong> "What's the best way to handle error responses and monitoring?"
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Expert:</strong> "Comprehensive error handling strategy:
+                <br>• Use standard HTTP status codes consistently
+                <br>• Implement gateway responses for common errors (400, 401, 429, 500)
+                <br>• Set up CloudWatch alarms for error rates and latency
+                <br>• Use X-Ray for distributed tracing
+                <br>• Enable access logging for detailed request information
+                <br>• Create custom error response templates
+                <br>• Monitor cache hit rates and API key usage"
+            </div>
+
+            <div class="conversation-turn non-tech-question">
+                <strong>Non-Tech:</strong> "Can API Gateway help us make money from our APIs? Some companies sell API access."
+            </div>
+
+            <div class="conversation-turn answer">
+                <strong>Developer:</strong> "Absolutely! API Gateway integrates with AWS Marketplace for monetization:
+                <br>• Create usage plans with different pricing tiers
+                <br>• Track API usage per customer automatically
+                <br>• Set up throttling to enforce plan limits
+                <br>• Generate usage reports for billing
+                <br>• Integrate with payment systems
+                <br>• Offer free tiers to attract developers
+                <br>Many companies build successful API businesses this way - it's like creating a digital product catalog."
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AWS Services Guide. Educational purposes only.</p>
+    </footer>
+</body>
+</html>
