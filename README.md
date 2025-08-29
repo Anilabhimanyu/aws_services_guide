@@ -23,4 +23,4 @@ It is designed as a reference guide for beginners and developers to quickly lear
 ## 🚀 How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/aws-services-docs.git
+   git clone https://github.com/Anilabhimanyu/aws_services_guide.git
